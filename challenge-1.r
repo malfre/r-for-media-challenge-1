@@ -22,7 +22,8 @@ hamburg_df <- data.frame(
  inhabitants_sum <- sum(hamburg_df$einwohner)
  density <- mean(hamburg_df$bevoelkerungsdichte)
 
-
+# aufgabe gelöst
+ 
 if(
   assert_that(
     has_name(hamburg_df, "bezirk"),
