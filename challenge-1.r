@@ -12,9 +12,15 @@ library(assertthat)
 #   * Wie viele Menschen leben insgesamt in den Stadtteilen?
 #   * Wie hoch ist die Bevökerungsdichte im Durchschnitt?
 
-# hamburg_df <- …
-# inhabitants_sum <- …
-# density <- …
+hamburg_df <- data.frame(
+  bezirk = c("Hamburg-Mitte", "Altona", "Eimsbüttel", "Hamburg-Nord", "Wandsbek", "Bergedorf", "Harburg"),
+  einwohner = c(301543, 275264 , 267051, 314593, 441012, 130260, 169426),
+  bevoelkerungsdichte = c(2121, 3534, 5362, 5443, 2990, 841, 1353),
+  bezirksamtsleiter = c("Droßmann", "von Berg", "Husen", "Werner-Boelz", "Ritzenhoff", "Dornquast", "Fredenhagen"),
+  flaeche = c(TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE)
+)
+ inhabitants_sum <- sum(hamburg_df$einwohner)
+ density <- mean(hamburg_df$bevoelkerungsdichte)
 
 
 if(
